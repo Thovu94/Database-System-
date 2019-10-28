@@ -1,0 +1,25 @@
+- In aircrafts:
++ Code, Category nad Name are good candidates to index because they are small columns with relatively small records. 
+
+-In airlines:
++ Code, Name, Short_name, and Country should be index because the same previous reasons.
+
+- In airports:
++ Code, Name, City, Sate, Country, latitude, longtitude, utc_offset and dst are good candiates to index since they can be used as a condition in ORDER BY or WHERE clause.
+
+- In Countries:
++ Code, Name, and Continent should be indexed because these columns consist of a small amount of records. Index will work affectively.
+
+- In flights:
++ Departure, arrival, day_op, dep_time and duration are not good candidates to index. Too much data can be updated, it will spend more time to index.
++ Carrier, airline, flightnum, and aircraft will be perfectly indexed.
+
+
+
+
+
+
+
+
+
+

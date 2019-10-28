@@ -1,0 +1,17 @@
+USE world;
+SELECT Name FROM city;
+SELECT Name FROM city ORDER BY Name DESC;
+SELECT DISTINCT Name FROM city;
+SELECT Name FROM city WHERE CountryCode='CAN';
+SELECT Name FROM city WHERE District ='ONTARIO' ORDER BY Name ASC;
+SELECT SUM(Population) AS TotalPop FROM city WHERE CountryCode='ARG';
+SELECT COUNT(Name) AS TotalCities FROM city WHERE CountryCode='BEL';
+SELECT DISTINCT District FROM city WHERE CountryCode='BRA';
+SELECT AVG(Population) As AvgPop FROM city WHERE CountryCode='BRA';
+SELECT COUNT(*) FROM city;
+
+
+
+
+
+

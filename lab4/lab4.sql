@@ -1,0 +1,15 @@
+USE World;
+SELECT * FROM City WHERE id=31;
+SELECT Name FROM City WHERE CountryCode="NLD";
+SELECT Name, Countrycode, Population FROM City WHERE Population > 20000 ORDER BY Population DESC;
+SELECT Name, Region, IndepYear, Population FROM country WHERE indepYear= 1993 OR (IndepYear < 1991 AND Population < 22000000);
+SELECT Name, IndepYear FROM Country WHERE IndepYear > 1960 AND IndepYear < 1980 ORDER BY IndepYear;
+SELECT Name, Continent FROM Country WHERE IndepYear > 1960 AND IndepYear < 1980 ORDER BY IndepYear;
+SELECT Name, Continent FROM Country WHERE Continent ="Europe" OR Continent="North America" ORDER BY Continent, Name;
+SELECT Name, Continent FROM Country WHERE Continent NOT IN("Europe", "North America") ORDER BY Continent, Name;
+SELECT Name, Continent FROM Country WHERE Continent LIKE "%America%" ORDER BY Continent, Name;
+SELECT Name, Continent FROM Country WHERE Name LIKE "_____" ORDER BY Continent, Name;
+SELECT Name, Continent FROM Country WHERE Name LIKE "__y__" ORDER BY Continent, Name;
+SELECT Name, Continent, IndepYear FROM Country WHERE IndepYear IS NULL ORDER BY Continent, Name;
+SELECT Name, Continent, IndepYear FROM Country WHERE IndepYear IS NOT NULL ORDER BY Continent, Name;
+SELECT Name, Continent, IndepYear FROM Country WHERE IndepYear IS NOT NULL ORDER BY Continent, Name LIMIT 5;
